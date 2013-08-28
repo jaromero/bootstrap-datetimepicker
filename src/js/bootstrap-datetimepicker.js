@@ -125,7 +125,7 @@
       this.widget.show();
       this.height = this.component ? this.component.outerHeight() : this.$element.outerHeight();
       this.place();
-      this.$element.trigger({
+      this.$element.triggerHandler({
         type: 'show',
         date: this._date
       });
@@ -157,7 +157,7 @@
       this.viewMode = this.startViewMode;
       this.showMode();
       this.set();
-      this.$element.trigger({
+      this.$element.triggerHandler({
         type: 'hide',
         date: this._date
       });
@@ -300,7 +300,7 @@
     },
 
     notifyChange: function(){
-      this.$element.trigger({
+      this.$element.triggerHandler({
         type: 'changeDate',
         date: this.getDate(),
         localDate: this.getLocalDate()
